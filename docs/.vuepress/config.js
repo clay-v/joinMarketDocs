@@ -10,6 +10,7 @@ module.exports = {
             collapsable: false,
             path: "/users",
             children: [
+              ["/users/from-zero-to-coinjoin", "from-zero-to-coinjoin"],
               ["/users/architecture-notes", "architecture-notes"],
               ["/users/config-irc-update", "config-irc-update"],
               ["/users/fidelity-bonds", "fidelity-bonds"],
