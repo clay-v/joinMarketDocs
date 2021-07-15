@@ -4,7 +4,7 @@ module.exports = {
   description: 'Make a coinjoin at any time',
   themeConfig: {
     sidebar: [
-      '/',
+      ["/users/", "Introduction"],
       {
             title: "User Guide",
             collapsable: false,
