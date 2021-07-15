@@ -10,22 +10,22 @@ module.exports = {
             collapsable: false,
             path: "/users",
             children: [
-              ["/users/from-zero-to-coinjoin", "from-zero-to-coinjoin"],
-              ["/users/architecture-notes", "architecture-notes"],
-              ["/users/config-irc-update", "config-irc-update"],
-              ["/users/fidelity-bonds", "fidelity-bonds"],
-              ["/users/INSTALL", "INSTALL"],
-              ["/users/JOINMARKET-QT-GUIDE", "JOINMARKET-QT-GUIDE"],
-              ["/users/NATIVE-SEGWIT-UPGRADE", "NATIVE-SEGWIT-UPGRADE"],
-              ["/users/orderbook", "orderbook"],
-              ["/users/PAYJOIN", "PAYJOIN"],
+              ["/users/from-zero-to-coinjoin", "Fastest Way to Coinjoin"],
+              ["/users/architecture-notes", "Architecture Notes"],
+              ["/users/config-irc-update", "IRC Configuration"],
+              ["/users/fidelity-bonds", "Fidelity Bonds"],
+              ["/users/INSTALL", "Install"],
+              ["/users/JOINMARKET-QT-GUIDE", "Joinmarket-QT Guide"],
+              ["/users/NATIVE-SEGWIT-UPGRADE", "Native Segwit Upgrade"],
+              ["/users/orderbook", "Orderbook"],
+              ["/users/PAYJOIN", "Payjoin"],
               ["/users/SNICKER", "SNICKER"],
-              ["/users/SOURCING-COMMITMENTS", "SOURCING-COMMITMENTS"],
-              ["/users/TODO", "TODO"],
-              ["/users/TESTING", "TESTING"],
-              ["/users/tumblerguide", "tumblerguide"],
+              ["/users/SOURCING-COMMITMENTS", "Sourcing Commitments"],
+              ["/users/TODO", "Todo"],
+              ["/users/TESTING", "Testing"],
+              ["/users/tumblerguide", "TUmbler Guide"],
               ["/users/USAGE", "USAGE"],
-              ["/users/YIELDGENERATOR", "YIELDGENERATOR"]
+              ["/users/YIELDGENERATOR", "Yield Generator"]
             ]
       },
       {
@@ -33,9 +33,9 @@ module.exports = {
             collapsable: false,
             path: "/developers",
             children: [
-              ["/developers/ArchOverview", "ArchOverview"],
-              ["/developers/High-level-design", "High-level-design"],
-              ["/developers/Joinmarket-messaging-protocol", "Joinmarket-messaging-protocol"]
+              ["/developers/ArchOverview", "Arch Overview"],
+              ["/developers/High-level-design", "High-level Design"],
+              ["/developers/Joinmarket-messaging-protocol", "Joinmarket Messaging Protocol"]
             ]
       },
     ]
