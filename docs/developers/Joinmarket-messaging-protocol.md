@@ -81,7 +81,7 @@ If length(nick) < `joinmarket.message_channel.NICK_MAX_ENCODED`, right pad with 
 Thus according to current rules the nick is 16 characters in length, consisting of one type byte, one version byte and 14 bytes of pubkey-hash (right padded if necessary to fix length).
 
 ##### Applying signatures to private messages.
-**All** private messages (whether encrypted or not) are extended with the additional fields <pubkey> <signature> where pubkey is the Bitcoin pubkey mentioned above, hex encoded, and the signature is a Bitcoin signature, also hex encoded (TODO: this could be substantially improved in encoding size with pubkey recovery, and more compact encoding). See [here](https://github.com/JoinMarket-Org/joinmarket/blob/35dc60848c201f1c071a00c885969d1cc458cbbf/joinmarket/message_channel.py#L851-L858).
+**All** private messages (whether encrypted or not) are extended with the additional fields \<pubkey\> \<signature\> where pubkey is the Bitcoin pubkey mentioned above, hex encoded, and the signature is a Bitcoin signature, also hex encoded (TODO: this could be substantially improved in encoding size with pubkey recovery, and more compact encoding). See [here](https://github.com/JoinMarket-Org/joinmarket/blob/35dc60848c201f1c071a00c885969d1cc458cbbf/joinmarket/message_channel.py#L851-L858).
 
 As defence against replaying the same signature on different message channels, note specifically that the plaintext which is signed is `message+hostid`, see [here](https://github.com/JoinMarket-Org/joinmarket/blob/35dc60848c201f1c071a00c885969d1cc458cbbf/joinmarket/message_channel.py#L855), where `hostid` is the hostid of this specific MessageChannel object, for IRC this is the "network" field passed from the IRC server.
 
