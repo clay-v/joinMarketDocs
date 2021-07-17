@@ -6,15 +6,29 @@ module.exports = {
     sidebar: [
       ["/users/", "Introduction"],
       {
+            title: "Installation",
+            collapsable: false,
+            children: [
+              {
+                    title: "Joininbox",
+                    collapsable: false,
+                    children: [
+                      ["/users/install-virtual-machine", "Virtual Machine"],
+                      ["https://github.com/openoms/joininbox#required-hardware", "Dedicated Hardware"]
+                    ]
+              },
+              ["/users/install-manual", "Manual Installation"]
+            ]
+      },
+      {
             title: "User Guide",
             collapsable: false,
             path: "/users",
             children: [
-              ["/users/from-zero-to-coinjoin", "Fastest Way to Coinjoin"],
               ["/users/architecture-notes", "Architecture Notes"],
               ["/users/config-irc-update", "IRC Configuration"],
               ["/users/fidelity-bonds", "Fidelity Bonds"],
-              ["/users/INSTALL", "Install"],
+              // ["/users/INSTALL", "Install"],
               ["/users/JOINMARKET-QT-GUIDE", "Joinmarket-QT Guide"],
               ["/users/NATIVE-SEGWIT-UPGRADE", "Native Segwit Upgrade"],
               ["/users/orderbook", "Orderbook"],
@@ -23,7 +37,7 @@ module.exports = {
               ["/users/SOURCING-COMMITMENTS", "Sourcing Commitments"],
               ["/users/TODO", "Todo"],
               ["/users/TESTING", "Testing"],
-              ["/users/tumblerguide", "TUmbler Guide"],
+              ["/users/tumblerguide", "Tumbler Guide"],
               ["/users/USAGE", "USAGE"],
               ["/users/YIELDGENERATOR", "Yield Generator"]
             ]
