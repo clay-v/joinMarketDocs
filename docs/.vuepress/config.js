@@ -20,16 +20,14 @@ module.exports = {
               ["/users/install-manual", "Manual Installation"]
             ]
       },
+      ["/users/JOINMARKET-QT-GUIDE", "Getting Started"],
       {
             title: "User Guide",
             collapsable: false,
-            path: "/users",
             children: [
               ["/users/architecture-notes", "Architecture Notes"],
               ["/users/config-irc-update", "IRC Configuration"],
               ["/users/fidelity-bonds", "Fidelity Bonds"],
-              // ["/users/INSTALL", "Install"],
-              ["/users/JOINMARKET-QT-GUIDE", "Joinmarket-QT Guide"],
               ["/users/NATIVE-SEGWIT-UPGRADE", "Native Segwit Upgrade"],
               ["/users/orderbook", "Orderbook"],
               ["/users/PAYJOIN", "Payjoin"],
@@ -45,7 +43,6 @@ module.exports = {
       {
             title: "Developer Guide",
             collapsable: false,
-            path: "/developers",
             children: [
               ["/developers/ArchOverview", "Arch Overview"],
               ["/developers/High-level-design", "High-level Design"],

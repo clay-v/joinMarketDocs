@@ -1,6 +1,8 @@
-# Walkthrough for running Joinmarket-Qt to do coinjoins (single or tumbler)
+# Joinmarket-QT Guide
 
-### Binary or script
+## Launch Joinmarket
+
+Ensure Bitcoin Core is running, and synced. (Your version of Bitcoin Core must be compiled with wallet support).
 
 The GUI can be run directly from Python script by doing `./joinmarket-qt.sh` from within `scripts/`, or, if using Microsoft Windows, by running the executable file/binary (**[CLICK HERE](https://github.com/JoinMarket-Org/joinmarket-clientserver/releases)** to download the latest release). If you followed normal installation procedure under Linux, desktop entry of JoinMarketQt should be added to the application menu of your desktop environment.
 
@@ -26,10 +28,6 @@ The GitHub commits to the main repo, above, are signed.
 
 (*Before starting, note that the screenshots here use testnet p2sh addresses (start with '2'), but by default Joinmarket mainnet addresses are native segwit ('bc1')*).
 
-### Walkthrough
-
-Ensure Bitcoin Core is running, and synced. (Your version of Bitcoin Core must be compiled with wallet support).
-
 Double click the binary to run it, or go to the `/scripts` subdirectory and run `joinmarket-qt.sh`.
 
 You will get the following error screen initially:
@@ -51,7 +49,9 @@ may avoid possible RPC errors (indeed, read the whole of that section on "Config
 Once the rpc connection is correct, and you restart, you will be presented with this start screen:
 
 ![](../users/images/JMQInitregtest.png)
-<!-- ![](/logoNoText.png) -->
+
+## Generate Wallet
+
 
 Note "CURRENT WALLET: NONE" means no joinmarket wallet is loaded yet. Assuming you haven't
 yet created one, do Wallet->Generate (otherwise, do Wallet-->Load):
@@ -93,13 +93,15 @@ of mixdepth 0. Once you have coins in the wallet it will show something like thi
 
 ![](../users/images/JMQwalletcoinsloadedregtest.png)
 
+
+### EXTERNAL and INTERNAL sections
 This is a good time to explain "EXTERNAL" and "INTERNAL"; external is for paying in.
 Use the 'new' addresses to ensure no address reuse, when you want to pay into the wallet.
 When paying out, Joinmarket will take coins from *both* from the internal and external.
 The long string after "EXTERNAL" and "INTERNAL" are the "xpub" keys that can be used in
 some advanced ways (they can be exported to allow watching accounts, for example).
 
-Next (and you could have done this at the start), take a look at the "Settings" tab.
+## Settings
 
 ![](../users/images/JMQsettingsregtest.png)
 
@@ -123,7 +125,7 @@ There are a lot of settings, most of which can be left default. Here are some no
 
 * Section **GUI** - these aren't GUI specific as the name suggests, and one or two are important. `gaplimit` is how far forward to search for used addresses on each branch before giving up; you're unlikely to need to change this. `history_file` is the name of the file in which the history of transactions you've performed is being recorded in plaintext. Consider the privacy implications. `check_high_fee` is a sanity check that the percentage fee you're being charged by counterparties isn't above that percent limit. `max_mix_depth` is how many "mixdepths" (or accounts) you have in your wallet. The default, 5, will be fine for most people. `check_tx` is whether to block processing and look at the fees in detail before accepting; this should usually be used for single coinjoins, but will not be used for tumbling.
 
-Next, we'll send a test transaction:
+## Single Coinjoin
 
 ![](../users/images/JMQSingleCJregtest.png)
 
@@ -133,7 +135,7 @@ The donation feature is disabled; you can donate to the general JM donation addr
 
 Paste the address you want to send to under `Recipient address`.
 
-The number of counterparties can be anything from 4 up to 20 (in theory you can make
+The `number of counterparties` can be anything from 4 up to 20 (in theory you can make
 coinjoin with even 1 counterparty, but that will not work with the default settings
 and is not a recommended practice for privacy reasons); realistically, numbers
 greater than about 10 can sometimes get a bit problematic, for a number of reasons, e.g.
@@ -142,7 +144,7 @@ with sensible fees, messaging delays etc. Having said that, joins with 10-15 cou
 *can* be done, and have been. But for ordinary working, we recommend a figure between
 4 and 10 as fine.
 
-Mixdepth: this is not completely obvious, and is **important**: this is *where you are
+`Mixdepth` this is not completely obvious, and is **important**: this is *where you are
 spending the coins from*. If you have 2 BTC in mixdepth 0 and 1 BTC in mixdepth 3, and
 you want to send 1.4 coins you must type `0` in this box; Joinmarket only spends coins
 from one mixdepth at one time, to aid privacy.
@@ -170,11 +172,16 @@ Once the transaction is finished, the Single Join tab will look something like t
 
 ![](../users/images/JMQtxcompletedsendregtest.png)
 
+## Sweeps
+
+If you want to send *all* the coins in a specific mixdepth at once, the correct way to do it
+is using the "sweep" feature. To do this, simply set the "Amount" field in the Single Join tab to zero. The program will automatically figure out the right output amount after accounting for the coinjoin and bitcoin transaction fees. If you try to send total amount, you will get a "not enough funds" error. Putting it another way, you'll end up with dust in the wallet if you try to send the total without using this sweep feature, so do use it.
+
 You can refer to the previous transactions you've done in the Tx History tab:
 
 ![](../users/images/JMQtxhistoryregtest.png)
 
-### Tumbler
+## Tumbler
 
 This walkthrough only showed the introductory steps to doing a first coinjoin. The main additional feature
 is "tumbler" algorithm, doing a set of coinjoins to move all coins from the wallet to a set of destinations,
@@ -202,12 +209,7 @@ On completing the wizard, you will see a new schedule displayed in the tab:
 
 You'll see your destination addresses in the list, and lots of "INTERNAL" meaning transactions that send back to the wallet (in the next mixdepth). Click `Run Schedule` and the tumbler will start. As it progresses, you'll see updates to the schedule (in particular the last entry in each list will change from `0` to `txid` to `1` when finished). The full tumbler run will usually take at least a few hours, as you'll understand if you read the wiki page linked above.
 
-### Sweeps
-
-If you want to send *all* the coins in a specific mixdepth at once, the correct way to do it
-is using the "sweep" feature. To do this, simply set the "Amount" field in the Single Join tab to zero. The program will automatically figure out the right output amount after accounting for the coinjoin and bitcoin transaction fees. If you try to send total amount, you will get a "not enough funds" error. Putting it another way, you'll end up with dust in the wallet if you try to send the total without using this sweep feature, so do use it.
-
-### Coins Tab
+## Coins Tab
 
 You can use the coins tab to (a) check the exact utxos owned by your wallet and (b) freeze or unfreeze certain utxos (coins) to allow coin control.
 
@@ -217,7 +219,7 @@ The latter can be done by right clicking on a utxo and choosing "freeze/unfreeze
 
 This can be useful if you want to spend from one or more specific utxos. Disable (freeze) the *other* coins in that mixdepth. Remember, Joinmarket will *never* co-spend utxos from different mixdepths (accounts), in any kind of transaction - they are completely isolated accounts.
 
-### Export private keys
+## Export private keys
 
 **DON'T TRY TO USE THIS USUALLY**.
 You should be able to import the wallet into some other wallets, as was mentioned above.
