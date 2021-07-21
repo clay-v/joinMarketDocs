@@ -2,7 +2,12 @@ module.exports = {
   base: '/joinMarketDocs/',
   title: 'JoinMarket Docs',
   description: 'Make a coinjoin at any time',
+  head: [
+    ['link', { rel : 'icon', href: '/favicon.ico' }]
+  ],
   themeConfig: {
+    repo: 'clay-v/joinMarketDocs',
+    repoLabel: 'Contribute',
     sidebar: [
       ["/users/", "Introduction"],
       {
