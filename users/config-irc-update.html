@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JoinMarket Docs</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/joinMarketDocs/favicon.ico">
+    <meta name="description" content="Make a coinjoin at any time">
+    
+    <link rel="preload" href="/joinMarketDocs/assets/css/0.styles.996e850d.css" as="style"><link rel="preload" href="/joinMarketDocs/assets/js/app.e9235a0d.js" as="script"><link rel="preload" href="/joinMarketDocs/assets/js/2.7c41aff4.js" as="script"><link rel="preload" href="/joinMarketDocs/assets/js/24.4055c4d6.js" as="script"><link rel="prefetch" href="/joinMarketDocs/assets/js/10.b37aa437.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/11.5a852c33.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/12.e48f53cf.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/13.a1a92b0d.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/14.e709f4da.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/15.b254ff06.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/16.476e3e08.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/17.258eeff4.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/18.0d170829.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/19.c48459bd.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/20.c8df477f.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/21.b79fd644.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/22.7969ece1.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/23.fc5bc4d3.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/25.9f433537.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/26.208be24b.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/27.e6aa6982.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/28.1e0e9743.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/29.72499ef8.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/3.79700d29.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/30.e62484ec.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/4.4637ac25.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/5.d4e70881.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/6.d3d3badf.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/7.6641a9e7.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/8.5e2f325d.js"><link rel="prefetch" href="/joinMarketDocs/assets/js/9.dc670b41.js">
+    <link rel="stylesheet" href="/joinMarketDocs/assets/css/0.styles.996e850d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/joinMarketDocs/" class="home-link router-link-active"><!----> <span class="site-name">JoinMarket Docs</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/clay-v/joinMarketDocs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/clay-v/joinMarketDocs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Contribute
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/joinMarketDocs/users/" aria-current="page" class="sidebar-link">Introduction</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Installation</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><a href="/joinMarketDocs/users/joininbox" class="sidebar-heading clickable open"><span>Joininbox</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/joinMarketDocs/users/install-virtual-machine.html" class="sidebar-link">Virtual Machine</a></li><li><a href="https://github.com/openoms/joininbox#required-hardware" target="_blank" rel="noopener noreferrer" class="sidebar-link">Dedicated Hardware<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></section></li><li><a href="/joinMarketDocs/users/install-manual.html" class="sidebar-link">Manual Installation</a></li></ul></section></li><li><a href="/joinMarketDocs/users/JOINMARKET-QT-GUIDE.html" class="sidebar-link">Getting Started</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>User Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/joinMarketDocs/users/architecture-notes.html" class="sidebar-link">Architecture Notes</a></li><li><a href="/joinMarketDocs/users/config-irc-update.html" aria-current="page" class="active sidebar-link">IRC Configuration</a></li><li><a href="/joinMarketDocs/users/fidelity-bonds.html" class="sidebar-link">Fidelity Bonds</a></li><li><a href="/joinMarketDocs/users/NATIVE-SEGWIT-UPGRADE.html" class="sidebar-link">Native Segwit Upgrade</a></li><li><a href="/joinMarketDocs/users/orderbook.html" class="sidebar-link">Orderbook</a></li><li><a href="/joinMarketDocs/users/PAYJOIN.html" class="sidebar-link">Payjoin</a></li><li><a href="/joinMarketDocs/users/SNICKER.html" class="sidebar-link">SNICKER</a></li><li><a href="/joinMarketDocs/users/SOURCING-COMMITMENTS.html" class="sidebar-link">Sourcing Commitments</a></li><li><a href="/joinMarketDocs/users/TODO.html" class="sidebar-link">Todo</a></li><li><a href="/joinMarketDocs/users/TESTING.html" class="sidebar-link">Testing</a></li><li><a href="/joinMarketDocs/users/tumblerguide.html" class="sidebar-link">Tumbler Guide</a></li><li><a href="/joinMarketDocs/users/USAGE.html" class="sidebar-link">USAGE</a></li><li><a href="/joinMarketDocs/users/YIELDGENERATOR.html" class="sidebar-link">Yield Generator</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Developer Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/joinMarketDocs/developers/ArchOverview.html" class="sidebar-link">Arch Overview</a></li><li><a href="/joinMarketDocs/developers/High-level-design.html" class="sidebar-link">High-level Design</a></li><li><a href="/joinMarketDocs/developers/Joinmarket-messaging-protocol.html" class="sidebar-link">Joinmarket Messaging Protocol</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>The configuration format for IRC servers has changed.</p> <p>Instead of the previous <code>[MESSAGING]</code> section there is now one section
+for each server. In order to update your <code>joinmarket.cfg</code> you have to
+move all options concerning one server into its own section with a
+section name in the format of <code>[MESSAGING:servername]</code>.</p> <p>example:</p> <p>old config:</p> <div class="language- extra-class"><pre><code>[MESSAGING]
+host = irc.cyberguerrilla.org, agora.anarplex.net, another.irc.server.example.com
+channel = joinmarket-pit, joinmarket-pit, joinmarket-pit
+port = 6697, 14716, 12345
+usessl = true, true, false
+socks5 = false, false, false
+socks5_host = localhost, localhost, localhost
+socks5_port = 9050, 9050, 9050
+#for tor
+#host = 6dvj6v5imhny3anf.onion, cfyfz6afpgfeirst.onion
+#onion / i2p have their own ports on CGAN
+#port = 6698, 6667
+#usessl = true, false
+#socks5 = true, true
+</code></pre></div><p>new config:</p> <div class="language- extra-class"><pre><code>[MESSAGING:server1]
+host = irc.cyberguerrilla.org
+channel = joinmarket-pit
+port = 6697
+usessl = true
+socks5 = false
+socks5_host = localhost
+socks5_port = 9050
+
+#for tor
+#host = 6dvj6v5imhny3anf.onion
+#onion / i2p have their own ports on CGAN
+#port = 6698
+#usessl = true
+#socks5 = true
+
+[MESSAGING:server2]
+host = agora.anarplex.net
+channel = joinmarket-pit
+port = 14716
+usessl = true
+socks5 = false
+socks5_host = localhost
+socks5_port = 9050
+
+#for tor
+#host = agora3cdw6kdty5y.onion
+#port = 6667
+#usessl = false
+#socks5 = true
+
+[MESSAGING:exampleserver]
+host = another.irc.server.example.com
+channel = joinmarket-pit
+port = 12345
+usessl = false
+socks5 = false
+socks5_host = localhost
+socks5_port = 9050</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/joinMarketDocs/users/architecture-notes.html" class="prev">
+        Architecture Notes
+      </a></span> <span class="next"><a href="/joinMarketDocs/users/fidelity-bonds.html">
+        Fidelity Bonds
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/joinMarketDocs/assets/js/app.e9235a0d.js" defer></script><script src="/joinMarketDocs/assets/js/2.7c41aff4.js" defer></script><script src="/joinMarketDocs/assets/js/24.4055c4d6.js" defer></script>
+  </body>
+</html>
