@@ -12,6 +12,7 @@ module.exports = {
               {
                     title: "Joininbox",
                     collapsable: false,
+                    path: "/users/joininbox",
                     children: [
                       ["/users/install-virtual-machine", "Virtual Machine"],
                       ["https://github.com/openoms/joininbox#required-hardware", "Dedicated Hardware"]
